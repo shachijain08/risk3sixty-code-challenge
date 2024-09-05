@@ -32,6 +32,9 @@ export default function Encryption(secret: string) {
       //decrypt to get plain text 
       let decrypted = decipher.update(encryptedData, 'base64', 'utf8')
       decrypted += decipher.final('utf8')
+      console.log("\n");
+      console.log("Decrypted plaintext: " + decrypted);
+      console.log("\n");
       return decrypted
     },
   }
